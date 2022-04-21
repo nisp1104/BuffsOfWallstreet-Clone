@@ -1,0 +1,97 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+<div class ="jumbotron" style="background-image: url('https://techstocktrading.com/wp-content/uploads/2018/10/stockmarket-740x410.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; ">
+    
+      <h2 style="color: white;">Welcome to the Marketplace!</h2>
+
+      <p class="text-center text-white">On this page is where you will make transactions happen. Make sure to fill out the form below with the correct information.</p>
+    </div>
+
+    <div class="container" style="width: 30%;">
+     
+      <fieldset class="form-group">
+        <div class="row">
+          <p>Are you buying or selling?</p>
+          <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" onclick="showHide(0)" type="radio" name="buyOrSell" id="selectBuy" value="Buy" required>
+            <label class="form-check-label" for="buyOrSell">
+            Buy
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" onclick="showHide(1)" type="radio" name="buyOrSell" id="selectSell" value="Sell">
+            <label class="form-check-label" for="buyOrSell">
+            Sell
+            </label>
+          </div>
+          </div>
+        </div>
+      </fieldset>
+     </div>
+
+     <div class= "container">
+      <form name="buyStock" id="buyStock" data-toggle="validator" action="/trade/buy_stock" method="post">
+          <div class="row ml-1">
+            <div>
+              <label for="ticker">Enter the company ticker symbol</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="text" class="form-control" id="ticker" name = "tckr_symbol" placeholder="e.g. 'AAPL'" required>
+            </div>
+          </div>
+          <div class="row ml-1">
+            <div>
+              <label for="amount">Enter the amount</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="number" class="form-control" id="qty" name = "qty" placeholder="e.g. 3" required>
+            </div>
+          </div>
+          <div class="row ml-1">
+            <div>
+              <label for="price">Enter the price (checkout the search page for this)</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="number" step="0.01" class="form-control" id="price" name = "price" placeholder="e.g. 237.50" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+
+        <form name="sellStock" id="sellStock" data-toggle="validator" action="/trade/sell_stock" method="post">
+          <div class="row ml-1">
+            <div>
+              <label for="ticker">Enter the company ticker symbol</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="text" class="form-control" id="ticker" name = "tckr_symbol" placeholder="e.g. 'AAPL'" required>
+            </div>
+          </div>
+          <div class="row ml-1">
+            <div>
+              <label for="amount">Enter the amount</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="number" class="form-control" id="qty" name = "qty" placeholder="e.g. 3" required>
+            </div>
+          </div>
+          <div class="row ml-1">
+            <div>
+              <label for="price">Enter the price (checkout the search page for this)</label>
+            </div>
+            <div class="ml-auto mr-3">
+              <input type="number" step="0.01" class="form-control" id="price" name = "price" placeholder="e.g. 237.50" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+
+      </div>
+
+      
+        
+
+      <%- include('../partials/footer') %>

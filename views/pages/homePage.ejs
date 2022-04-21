@@ -1,0 +1,55 @@
+
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+
+    <div class="container">
+      <br>
+      <br>
+       <h1><b>Welcome to MockStock</b></h1>
+    <h2> We provide a competitive, risk-free introduction to investing for all.</h2>
+    
+    <div class="slideshow-container">
+     <div class="changeSlides fade">
+      <img src="./resources/img/image_1.jpg" style="width:100%">
+      <div class="text">We provide a competitive, risk-free introduction to investing for all.<br>For Business students, or anybody that is interested in the stock market but intimidated by it. We want our consumers to see our application as a risk free tool to learn about the stock market.</div>
+    </div>
+    <div class="changeSlides fade">
+      <img src="./resources/img/image_2.jpg" style="width:100%">
+      <div class="text">Our Website will allow you to learn the basics of the stock market without having to risk anything while getting real experience at the same time. You will be able to make different profiles so you can invest in different ways and see which profile will have the best performance.   </div>
+    </div>
+    <div class="changeSlides fade">
+      <img src="./resources/img/image_3.jpg" style="width:100%" height="800px">
+      <div class="text">MockStock is a trading website that gives you the ability to learn to trade stocks risk free, and allows you to interact with the stock market without actually entering any of your own money</div>
+    </div>
+  </div>
+  <br>
+  <br>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+    </div> 
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("changeSlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 9000); // Change image every 9 seconds
+          };
+    </script>
+
+<%- include('../partials/footer') %>
+
+

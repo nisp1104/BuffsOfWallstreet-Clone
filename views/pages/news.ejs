@@ -1,0 +1,85 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+<body onload="loadNewsPage()">
+    <br>
+    <br>
+    <br>
+    <div class="container news-container" id="newsCards">
+
+    </div>
+    <script src="../resources/js/scripts.js"></script>
+    <!-- Footer NavBar for user to change news page -->
+    <div class = "navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom"> 
+      <ul class="navbar-nav">
+        <div class="dropup">
+          <button class="news-page-btn" style="padding: 16px; font-size: 16px;">Category</button>
+          <div class="dropup-content">
+            <a href="#" id="news_crypto" onclick="filterCategory('crypto')">Crypto</a>
+            <a href="#" id="news_forex" onclick="filterCategory('forex')">Forex</a>
+            <a href="#" id="news_general" onclick="filterCategory('general')">General</a>
+            <a href="#" id="news_merger" onclick="filterCategory('merger')">Merger</a>
+          </div>
+        </div>
+      </ul>
+      <div class="mx-auto">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Select Page:
+            </a>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(0)">
+              1
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(1)"> 
+              2
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(2)">
+              3
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(3)">
+              4
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(4)">
+              5
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(5)">
+              6
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(6)">
+              7
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(7)">
+              8
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(8)">
+              9
+            </button>
+          </li>
+          <li class="nav-item-btn">
+            <button type="button" class="news-page-btn" onclick="changeNewsPage(9)">
+              10
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%- include('../partials/footer') %>
+

@@ -1,0 +1,23 @@
+sudo -u postgres psql
+create database mockstock;
+\c mockstock;
+\password
+# enter your password for mockstock. I simply used 'mockstock' which is what is used in the server.js
+CREATE TABLE user_stocks(
+	ticker VARCHAR(40) NOT NULL,
+	qty INTEGER NOT NULL,
+	price FLOAT NOT NULL);
+
+INSERT INTO user_stocks(ticker,qty,price)
+VALUES ('TSLA',1,562.91),
+('MSFT',1,212.67),
+('NFLX',1,438.26),
+('AAPL',2,116.04);
+
+CREATE TABLE competitor(
+	id SERIAL PRIMARY KEY,
+	email VARCHAR(40) NOT NULL,
+	password VARCHAR(40) NOT NULL);
+
+INSERT INTO competitor(email,password)
+VALUES('user1@123.com','1234');

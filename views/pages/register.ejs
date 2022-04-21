@@ -1,0 +1,76 @@
+<%- include('../partials/header') %>
+ <!-- NavBar to match with other .html files goes here-->
+<%- include('../partials/menu') %>
+
+    <br><br><br><div class="container" style="width: 40%; padding: 10px;">
+      <h1><b>Registration Page</b></h1>
+    </div><br>
+
+    <p style="font-size: 12px">Fields with * are required!</p>
+
+    <div class="container-register">
+      <form id="register-form" onsubmit="return valid()" action="/homePage">  
+        <div class="row">  
+          <div class="column-register" style="text-align: left">
+            <label>*<b>First Name:</b></label> 
+          </div>
+          <div class="column-register">   
+            <input type="text" placeholder="First Name" onkeyup="fields_empty()" id="first-name" required>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="column-register" style="text-align: left">  
+            <label>*<b>Last Name:</b></label>
+          </div>
+          <div class="column-register">  
+            <input type="text" placeholder="Last Name" onkeyup="fields_empty()" id="last-name" required>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="column-register" style="text-align: left">  
+            <label><b>Email:</b></label>
+          </div>
+          <div class="column-register">  
+            <input type="text" placeholder="john.doe@gmail.com" onkeyup="fields_empty()" id="user-email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-register" style="text-align: left">    
+            <label>*<b>Choose a Username:</b></label>
+          </div>
+          <div class="column-register">  
+            <input type="text" placeholder="Username" onkeyup="fields_empty()" id="username">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-register" style="text-align: left">  
+            <label>*<b>Choose a Password:</b></label>
+          </div>
+          <div class="column-register">  
+            <input type="password" placeholder="****************" onkeyup="fields_empty()" id="password" required>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="column-register" style="text-align: left">  
+            <label>*<b>Re-enter Password:</b></label>
+          </div>
+          <div class="column-register">  
+            <input type="password" placeholder="****************" onkeyup="fields_empty()" id="password-auth" required>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="column-register">  
+            <a class="a-register" href="loginHome.html">
+              <button type="button" class="btn cancel-btn">Cancel</button>
+            </a>
+          </div>
+          <div class="column-register">  
+            <button id="reg-button" type="submit"  class="btn reg-page-btn" disabled>Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="../resources/js/scripts.js"></script>
+ <%- include('../partials/footer') %>

@@ -1,0 +1,50 @@
+<%- include('../partials/header') %>
+
+ <!-- NavBar to match with other .html files goes here-->
+<%- include('../partials/menu') %>
+    
+    <br>
+    <br>
+    <br>
+    <div class= "container">
+      <h1 class = "text-center">Account Profile</h1>
+    </div>
+
+    
+    <!-- This section will be a chart to track's user's gains/losses -->
+    <div class ="jumbotron" style="background-image: url('https://www.thebalance.com/thmb/Z1d52oJkT2Hn8VHTc27KWFFO8OM=/2121x1193/smart/filters:no_upscale()/2020_Stk_Mkt_Crash_GettyImages-169975453-9914431a81f14c9aaf1a8dcbeafeaffb.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; ">
+    
+      <h2 class="text-center" style="color: white;">Check your positions here</h2>
+
+    </div>
+
+    <a href="/trade" class="btn news-page-btn" style="padding: 10px 20px; font-size: 16px; display: inline-block;" role="button">Click here to trade</a>
+
+     <br>
+    <br>
+    <div class= "container">
+        <h2 class = "text-center">Positions</h2>
+
+        <table class="table table-striped table-dark"  id = "Positions"  >
+          <thead>
+              <tr>
+                  <th>Company Symbol</th>
+                  <th>QTY</th>
+                  <th>Price Paid</th>
+                  <!-- <th>Market Value</th> -->
+                  <!-- <th>Profit Loss/Gain</th> -->
+              </tr>
+          </thead>
+          <tbody>          
+          </tbody>
+        </table>
+
+
+      </div>
+
+      <a href="/trade" class="btn news-page-btn" style="padding: 10px 20px; font-size: 16px; display: inline-block;" role="button">Click here to trade</a>
+
+
+<%- include('../partials/footer') %>

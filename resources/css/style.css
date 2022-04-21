@@ -1,0 +1,313 @@
+/*
+  Global CSS
+  This is the styling for various predefined HTML elements.
+*/
+
+/* * {box-sizing: border-box;} */
+
+img {
+  vertical-align: middle;
+  mix-blend-mode: multiply;
+}
+
+body {
+  background-color: #e9e9e9;
+  font: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+h1 { 
+  padding-bottom: 5px;
+  margin: 0; 
+  color: rgb(43, 54, 66);
+  font-size: 56px;
+  -webkit-text-stroke: 2px green;
+  text-shadow: 0px 4px 4px green;
+}
+
+h2 {
+  font: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: black;
+}
+
+div {
+  text-align: center;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+}
+
+/* CSS for news buttons */
+.container .news-container {
+  padding: 0px 50px;
+  display: inline-block;
+}
+
+.nav-item-btn {
+  padding: 10px 10px;
+}
+
+.news-page-btn {
+  outline: none;
+  border: none;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  background-color: #1d8a13;
+  color: white;
+  font-size: 12px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 6px #0f4709;
+}
+
+.news-page-btn:hover {
+  box-shadow: 0 4px #0f4709;
+  color: white;
+  top: 2px;
+}
+
+.news-page-btn:focus, .news-page-btn:active {
+  box-shadow: none;
+  top: 6px;
+  background-color: #0f4709;
+  border: none;
+}
+
+/* 
+  CSS for cancel buttons 
+  Same as news button but with different colors
+*/
+
+.cancel-btn {
+  outline: none;
+  border: none;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #f22213;
+  color: white;
+  font-size: 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 6px #a3160b;
+}
+
+.cancel-btn:hover {
+  box-shadow: 0 4px #a3160b;
+  color: white;
+  top: 2px;
+}
+
+.cancel-btn:focus, .cancel-btn:active {
+  box-shadow: none;
+  top: 6px;
+  background-color: #a3160b;
+  border: none;
+}
+
+/* Homepage Glowing Text */
+
+.text {
+  color: black;
+  font-size: 40px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  transform:center;
+  text-shadow: 4px 4px 8px #f2f2f2, 0 0 25px darkviolet, 0 0 5px indigo;
+}
+
+/* Homepage dots animation */
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active1 {
+  background-color: #717171;
+}
+
+/* Homepage slideshow */
+.changeSlides {display: none;}
+
+.slideshow-container {
+  max-width: 1000px;
+  max-height: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 8.8s;
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+/* Registration Page Fine Print */
+.fine-print {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Login Avatar and Image Container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  height: 10%;
+  border-radius: 10%;
+}
+
+/*CSS for Register Page Specifics*/
+.column-register{
+  width: 200px;
+}
+
+.container-register {
+  margin-left: 35%;
+  margin-right: 10%;
+}
+
+.a-register {
+  color: white;
+}
+
+.a-register:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.reg-page-btn {
+  outline: none;
+  border: none;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #1d8a13;
+  color: white;
+  font-size: 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 6px #0f4709;
+}
+
+.reg-page-btn:hover {
+  box-shadow: 0 4px #0f4709;
+  color: white;
+  top: 2px;
+}
+
+.reg-page-btn:focus, .reg-page-btn:active {
+  box-shadow: none;
+  top: 6px;
+  background-color: #0f4709;
+  border: none;
+}
+
+/*CSS for Login Hom Page*/
+.jumbotron-login-home {
+  background-image: url(https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/595644/stock-up-glowing-green-arrow-climbs-on-a-stock-screen.jpg&w=2000&op=resize);
+}
+/*CSS for hiding buy/sell*/
+#buyStock{
+  position: absolute;
+  visibility: hidden; 
+  margin-left: 10%;
+    margin-right:60%;
+    width: 50%
+}
+#sellStock{
+  position: absolute;
+  visibility: hidden; 
+  margin-left: 10%;
+    margin-right:60%;
+    width: 50%
+}
+/* Dropup Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropup content */
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropup-content:focus {
+  background-color: #ddd;
+}
+
+/* Links inside the dropup */
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropup links on hover */
+.dropup-content a:hover {background-color: #ddd}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
